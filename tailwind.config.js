@@ -61,10 +61,14 @@ export default {
       },
       spacing: {
         'margin-desktop': '64px',
+        'margin-tablet': '40px',
         unit: '8px',
         'margin-mobile': '20px',
         gutter: '24px',
         'container-max': '1280px',
+      },
+      screens: {
+        xs: '480px',
       },
       maxWidth: {
         'container-max': '1280px',

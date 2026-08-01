@@ -12,17 +12,17 @@ export default function AccountingTaxPage() {
   return (
     <Layout activeItem="services" variant="default" ctaLabel="Get Started">
       <>
-        <main className="pt-20">
+        <main className="pt-20 md:pt-24">
         
         <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 z-10"></div>
         <div className="w-full h-full bg-cover bg-center" data-alt="A sophisticated high-angle view of a dark wooden executive desk featuring a sleek laptop, financial charts with gold and blue accents, a leather-bound notebook, and premium metal pens. The lighting is moody and professional, emphasizing a corporate atmosphere of excellence and precision. The background shows a blurred modern office skyline through a window at dusk." style={{ backgroundImage: 'url(\'https://lh3.googleusercontent.com/aida-public/AB6AXuBF-TgGuI7-gxn4m88JiDQICnDuWQxpHcSi-5UO_ZxIY9TwRgfM0AOY2QHhHXOVdoRTEyHki6MbjP7DE7s5Ow1UWu-q5I8DzSc50sHfjI-pcMvP0ONZ1vQMzRaWLZDRgpecn4isRcJE7TWKkhEbuog3jqOAkVBANzbgweZCfVvYMiKIvQXt1J0CiN0dsPyFVKQn77EOPwcZmZZGh4vni_ko_l50_jTzkswTfIJfFP_4FiudGH13pS78\')' }}></div>
         </div>
-        <div className="relative z-20 max-w-[1280px] mx-auto px-margin-desktop w-full">
+        <div className="relative z-20 max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop w-full">
         <div className="max-w-2xl">
         <span className="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md mb-6 animate-fade-in">PREMIUM TAX SERVICES</span>
-        <h1 className="font-display-lg text-display-lg text-white mb-6">Financial Excellence & <span className="text-secondary-fixed">Strategic Tax Solutions</span></h1>
+        <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Financial Excellence & <span className="text-secondary-fixed">Strategic Tax Solutions</span></h1>
         <p className="font-body-lg text-body-lg text-white/80 mb-10">Empowering New Delhi's businesses with institutional-grade accounting, rigorous compliance audits, and tax strategies designed for high-stakes enterprise growth.</p>
         <div className="flex flex-wrap gap-4">
         <button className="btn-gold px-8 py-4 rounded-xl font-label-md uppercase tracking-widest">Request a Quote</button>
@@ -32,10 +32,10 @@ export default function AccountingTaxPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface">
-        <div className="max-w-[1280px] mx-auto px-margin-desktop">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface">
+        <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
         <div className="text-center mb-16">
-        <h2 className="font-headline-md text-headline-md text-primary mb-4">Institutional Service Suite</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Institutional Service Suite</h2>
         <p className="text-outline max-w-2xl mx-auto">Comprehensive accounting and taxation architecture tailored for modern corporate entities and startups.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
@@ -108,11 +108,11 @@ export default function AccountingTaxPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-primary text-white overflow-hidden relative">
+        <section className="py-12 md:py-16 lg:py-24 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
         
         </div>
-        <div className="max-w-[1280px] mx-auto px-margin-desktop relative z-10">
+        <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
         <div className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
         <span className="material-symbols-outlined text-4xl text-secondary-fixed mb-6">verified_user</span>
@@ -133,9 +133,9 @@ export default function AccountingTaxPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface-container-low">
-        <div className="max-w-[1280px] mx-auto px-margin-desktop">
-        <h2 className="font-headline-md text-headline-md text-primary text-center mb-16">The Professional Workflow</h2>
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low">
+        <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary text-center mb-16">The Professional Workflow</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
         <div className="relative z-10 flex flex-col items-center text-center step-line">
         <div className="w-16 h-16 rounded-full bg-white border-4 border-secondary text-secondary flex items-center justify-center font-bold text-xl mb-6 shadow-md">1</div>
@@ -161,9 +161,9 @@ export default function AccountingTaxPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface">
-        <div className="max-w-[800px] mx-auto px-margin-desktop">
-        <h2 className="font-headline-md text-headline-md text-primary text-center mb-12">Expert Answers</h2>
+        <section className="py-12 md:py-16 lg:py-24 bg-surface">
+        <div className="max-w-[800px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary text-center mb-12">Expert Answers</h2>
         <div className="space-y-4">
         <details className="group bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden" open>
         <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
@@ -196,14 +196,14 @@ export default function AccountingTaxPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface relative overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-margin-desktop">
-        <div className="relative rounded-3xl overflow-hidden bg-primary p-12 md:p-20 text-center">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface relative overflow-hidden">
+        <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        <div className="relative rounded-3xl overflow-hidden bg-primary p-8 sm:p-12 md:p-16 lg:p-20 text-center">
         <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         </div>
         <div className="relative z-10 max-w-2xl mx-auto">
-        <h2 className="font-display-lg text-display-lg text-white mb-6">Ready to Streamline Your Finances?</h2>
+        <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Ready to Streamline Your Finances?</h2>
         <p className="text-white/80 font-body-lg mb-10">Join 500+ corporate clients who trust Thakur Consultancy for their institutional accounting and tax compliance needs.</p>
         <button className="btn-gold px-12 py-5 rounded-xl font-label-md uppercase tracking-widest text-lg">Request a Free Consultation</button>
         </div>

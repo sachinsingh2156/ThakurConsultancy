@@ -7,13 +7,13 @@ export default function HomePage() {
   return (
     <Layout activeItem="home" variant="default" ctaLabel="Get Started">
       <>
-        <section className="relative h-screen flex items-center pt-16 overflow-hidden">
+        <section className="relative min-h-[100svh] md:h-screen flex items-center pt-20 md:pt-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
-        <img alt="Hero background" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIKurL9Q4fe7MTr677o4gkRgqb7AMDE4_S5bkmycxiLHd33DY-0lJn62QcJIMBokclKMExVd_t6NY_fWpQC1hbuskG56Ebz9oTkui1wQBfvg5LNWH7fTrpxbqRYblKelroIdAGpeJGzM7K7p81lpvi7Z7UXmbIcoU1vbLV94RPPuZWxEZTIojPqMI-EHQff0D3bl3BGva3yXo7L3Q_b36OnDcZn-cc8D835aMGkIV9ax73CqIudE5S" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+        <img alt="Hero background" className="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIKurL9Q4fe7MTr677o4gkRgqb7AMDE4_S5bkmycxiLHd33DY-0lJn62QcJIMBokclKMExVd_t6NY_fWpQC1hbuskG56Ebz9oTkui1wQBfvg5LNWH7fTrpxbqRYblKelroIdAGpeJGzM7K7p81lpvi7Z7UXmbIcoU1vbLV94RPPuZWxEZTIojPqMI-EHQff0D3bl3BGva3yXo7L3Q_b36OnDcZn-cc8D835aMGkIV9ax73CqIudE5S" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 md:via-primary/40 to-primary/60 md:to-transparent"></div>
         </div>
-        <div className="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
-        <div className="max-w-2xl space-y-6">
+        <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop w-full py-12 md:py-0">
+        <div className="max-w-2xl space-y-4 md:space-y-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/30 border border-secondary/20 backdrop-blur-sm">
         <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
         <span className="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Premier Consulting in New Delhi</span>
@@ -21,14 +21,14 @@ export default function HomePage() {
         <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg text-white leading-tight">
                             Complete HR, Compliance & Accounting Solutions for Your Business
                         </h1>
-        <p className="text-body-lg font-body-lg text-white/80 leading-relaxed">
+        <p className="text-body-md md:text-body-lg font-body-lg text-white/80 leading-relaxed">
                             Empowering Indian enterprises with institutional-grade compliance management, strategic HR operations, and transparent accounting frameworks.
                         </p>
-        <div className="flex flex-wrap gap-4 pt-4">
-        <button className="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-label-md text-label-md hover:brightness-110 transition-all shadow-xl hover:-translate-y-1">
+        <div className="flex flex-col xs:flex-row flex-wrap gap-3 md:gap-4 pt-2 md:pt-4">
+        <button className="bg-secondary-fixed text-on-secondary-fixed px-6 md:px-8 py-3 md:py-4 rounded-lg font-label-md text-label-md hover:brightness-110 transition-all shadow-xl hover:-translate-y-1 w-full xs:w-auto text-center">
                                 Get Free Consultation
                             </button>
-        <button className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-white/20 transition-all">
+        <button className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-label-md text-label-md hover:bg-white/20 transition-all w-full xs:w-auto text-center">
                                 Our Services
                             </button>
         </div>
@@ -36,30 +36,30 @@ export default function HomePage() {
         </div>
         </section>
         
-        <section className="relative -mt-16 z-20 px-margin-desktop max-w-container-max mx-auto">
-        <div className="glass-card rounded-xl p-10 grid grid-cols-2 md:grid-cols-4 gap-gutter text-center border-white/50">
+        <section className="relative -mt-8 md:-mt-16 z-20 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+        <div className="glass-card rounded-xl p-6 sm:p-8 md:p-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter text-center border-white/50">
         <div className="space-y-1">
-        <div className="text-headline-md font-headline-md text-primary" id="stat-clients">500+</div>
+        <div className="text-headline-sm md:text-headline-md font-headline-md text-primary" id="stat-clients">500+</div>
         <div className="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest">Active Clients</div>
         </div>
         <div className="space-y-1">
-        <div className="text-headline-md font-headline-md text-primary" id="stat-years">15+</div>
+        <div className="text-headline-sm md:text-headline-md font-headline-md text-primary" id="stat-years">15+</div>
         <div className="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest">Years Expertise</div>
         </div>
         <div className="space-y-1">
-        <div className="text-headline-md font-headline-md text-primary" id="stat-compliance">98%</div>
+        <div className="text-headline-sm md:text-headline-md font-headline-md text-primary" id="stat-compliance">98%</div>
         <div className="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest">Compliance Rate</div>
         </div>
         <div className="space-y-1">
-        <div className="text-headline-md font-headline-md text-primary" id="stat-experts">40+</div>
+        <div className="text-headline-sm md:text-headline-md font-headline-md text-primary" id="stat-experts">40+</div>
         <div className="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest">Senior Advisors</div>
         </div>
         </div>
         </section>
         
-        <section className="py-24 px-margin-desktop max-w-container-max mx-auto reveal active" id="services">
+        <section className="py-12 md:py-16 lg:py-24 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto reveal active" id="services">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-        <h2 className="text-headline-md font-headline-md text-primary">Core Specializations</h2>
+        <h2 className="text-headline-sm md:text-headline-md font-headline-md text-primary">Core Specializations</h2>
         <p className="text-body-md font-body-md text-on-surface-variant">We provide a holistic ecosystem of corporate services designed to streamline your operations and mitigate risks.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
@@ -110,8 +110,8 @@ export default function HomePage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface-container-low reveal active" id="about">
-        <div className="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low reveal active" id="about">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         <div className="relative">
         <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10">
         <img className="w-full h-full object-cover" data-alt="A professional business team in a high-rise New Delhi office overlooking the city skyline, discussing corporate strategies in a sleek, glass-walled conference room. The atmosphere is sophisticated and authoritative, with a clean light-mode palette of whites and deep blues. Soft sunlight filters through floor-to-ceiling windows, highlighting the modern, prestige-tech interior design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC2MamfsgC3i5CnJxk4MgQUbcyUs2k8Vj2BT4Z4K8CgDbUP3O59INb0X38bGmUlPC-zwe_ixssU48JRSerh3UqKbM44oIeWJPl8Y-mCtmL7adnBJequBAjolfZByLDZZxEPCbVdAzdzJ_NGQlNsnDVMEY2-a3P6QD7Vh93IR3fLkvEeasrgHxA4BbqkpWUSXaK-nsQDfMqY3hNk-390S8du3fFQxALfSpmZaUbmeQLfa3B3C-s9gYn" />
@@ -124,7 +124,7 @@ export default function HomePage() {
         </div>
         <div className="space-y-8">
         <div className="space-y-4">
-        <h2 className="text-headline-md font-headline-md text-primary">Why Leading Enterprises Choose Thakur Consultancy</h2>
+        <h2 className="text-headline-sm md:text-headline-md font-headline-md text-primary">Why Leading Enterprises Choose Thakur Consultancy</h2>
         <p className="text-body-md font-body-md text-on-surface-variant">We bridge the gap between complex Indian regulations and seamless business execution. Our localized expertise in New Delhi combined with international service standards makes us the partner of choice.</p>
         </div>
         <ul className="space-y-6">
@@ -160,9 +160,9 @@ export default function HomePage() {
         </div>
         </section>
         
-        <section className="py-24 px-margin-desktop max-w-container-max mx-auto reveal active">
+        <section className="py-12 md:py-16 lg:py-24 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto reveal active">
         <div className="text-center max-w-2xl mx-auto mb-16">
-        <h2 className="text-headline-md font-headline-md text-primary">Our Transparent Approach</h2>
+        <h2 className="text-headline-sm md:text-headline-md font-headline-md text-primary">Our Transparent Approach</h2>
         </div>
         <div className="relative">
         <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 -translate-y-1/2 z-0"></div>
@@ -191,8 +191,8 @@ export default function HomePage() {
         </div>
         </section>
         
-        <section className="py-24 bg-primary text-white overflow-hidden">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
+        <section className="py-12 md:py-16 lg:py-24 bg-primary text-white overflow-hidden">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
         <div className="mb-12">
         <h2 className="text-headline-md font-headline-md">Trusted by C-Suite Executives</h2>
         </div>
@@ -253,10 +253,10 @@ export default function HomePage() {
         </div>
         </section>
         
-        <section className="py-24 px-margin-desktop max-w-container-max mx-auto reveal active">
+        <section className="py-12 md:py-16 lg:py-24 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto reveal active">
         <div className="flex justify-between items-end mb-12">
         <div className="max-w-xl">
-        <h2 className="text-headline-md font-headline-md text-primary">Strategic Insights</h2>
+        <h2 className="text-headline-sm md:text-headline-md font-headline-md text-primary">Strategic Insights</h2>
         <p className="text-on-surface-variant text-body-md mt-2">Latest updates on Indian labor laws, taxation shifts, and HR best practices.</p>
         </div>
         <a className="hidden md:flex items-center gap-2 text-primary font-bold hover:underline" href="#">View All Articles <span className="material-symbols-outlined" data-icon="north_east">north_east</span></a>
@@ -289,9 +289,9 @@ export default function HomePage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface-container-high reveal active">
-        <div className="max-w-3xl mx-auto px-margin-desktop">
-        <h2 className="text-headline-md font-headline-md text-primary text-center mb-12">Expert Answers to Common Queries</h2>
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-high reveal active">
+        <div className="max-w-3xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        <h2 className="text-headline-sm md:text-headline-md font-headline-md text-primary text-center mb-12">Expert Answers to Common Queries</h2>
         <div className="space-y-4">
         <details className="group glass-card rounded-xl border-white/50 p-6 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
         <summary className="flex justify-between items-center cursor-pointer list-none">
@@ -324,8 +324,8 @@ export default function HomePage() {
         </div>
         </section>
         
-        <section className="py-20 px-margin-desktop reveal active">
-        <div className="max-w-container-max mx-auto glass-card rounded-3xl p-16 text-center bg-primary text-white overflow-hidden relative">
+        <section className="py-10 md:py-16 lg:py-20 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop reveal active">
+        <div className="max-w-container-max mx-auto glass-card rounded-3xl p-6 sm:p-10 md:p-16 text-center bg-primary text-white overflow-hidden relative">
         <div className="absolute -top-24 -left-24 w-64 h-64 bg-secondary-fixed opacity-10 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-fixed opacity-10 rounded-full blur-3xl"></div>
         <div className="relative z-10 space-y-6">

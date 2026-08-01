@@ -24,8 +24,8 @@ export default function AboutPage() {
 
   return (
     <Layout activeItem="about" variant="default" ctaLabel="Get Started">
-      <main className="pt-20">
-        <section className="relative h-[600px] flex items-center overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+      <main className="pt-20 md:pt-24">
+        <section className="relative min-h-[70vh] md:h-[600px] flex items-center overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
           <div className="absolute inset-0 z-0">
             <img
               className="w-full h-full object-cover"
@@ -34,12 +34,12 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-primary/40 backdrop-brightness-75" />
           </div>
-          <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+          <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop w-full">
             <div className="max-w-2xl">
               <span className="inline-block px-4 py-1 bg-secondary text-white font-label-md rounded-full mb-6 uppercase tracking-widest">
                 Established 2009
               </span>
-              <h1 className="font-display-lg text-display-lg text-white mb-6">Our Story & Commitment to Excellence</h1>
+              <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Our Story & Commitment to Excellence</h1>
               <p className="font-body-lg text-body-lg text-white/90 leading-relaxed mb-8">
                 Building the structural backbone for India&apos;s leading enterprises through precision-driven HR,
                 compliance, and accounting services.
@@ -48,11 +48,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-surface transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
               <div>
-                <h2 className="font-headline-md text-headline-md text-primary mb-6">
+                <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-6">
                   15+ Years of Corporate Excellence in New Delhi
                 </h2>
                 <div className="space-y-4 text-on-surface-variant font-body-lg leading-relaxed">
@@ -68,7 +68,7 @@ export default function AboutPage() {
                     regulatory core.
                   </p>
                 </div>
-                <div className="mt-10 flex gap-12">
+                <div className="mt-10 flex flex-wrap gap-6 sm:gap-8 md:gap-12">
                   <div>
                     <p className="text-4xl font-bold text-secondary">500+</p>
                     <p className="text-label-md text-outline">Clients Managed</p>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYyYIl_R2Br3VPr6gXvX-II-A194Nluq-vlh_2ofMK6Ha7egjBnYEKewRkcQaC3uPjmvQj0AJ5XYVmqd-5R3TWdqlFe3_gzZguumVjYvYOH79w7QeEZEGE0ad9WcztgAhDF7rGiYswIMMK4uD2iJKl1AKz1W_N-zWxIgJR62GibUDWNbEhOwqufrro1VabiB7wOSBIQI0t4LoCB7NtxmLITOgerPwUWTcUeAYBj_ODpIgHWvGbEOrK"
                   />
                 </div>
-                <div className="absolute -bottom-6 -left-6 glass-card p-8 rounded-xl max-w-xs">
+                <div className="absolute -bottom-4 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto glass-card p-4 sm:p-8 rounded-xl max-w-xs">
                   <MaterialIcon icon="verified" className="text-secondary text-4xl mb-4" />
                   <p className="font-headline-sm text-headline-sm text-primary">Certified Quality</p>
                   <p className="text-on-surface-variant mt-2">
@@ -103,14 +103,14 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-surface-container-low transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="glass-card p-12 rounded-2xl hover:scale-[1.02] transition-transform duration-500 group">
                 <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-8 group-hover:golden-gradient transition-all">
                   <MaterialIcon icon="flag" className="text-white text-3xl" />
                 </div>
-                <h3 className="font-headline-md text-headline-md text-primary mb-4">Our Mission</h3>
+                <h3 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Our Mission</h3>
                 <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
                   To empower Indian enterprises with transparent, high-integrity corporate solutions that mitigate risk
                   and foster sustainable institutional growth through expert guidance.
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-8 group-hover:golden-gradient transition-all">
                   <MaterialIcon icon="visibility" className="text-white text-3xl" />
                 </div>
-                <h3 className="font-headline-md text-headline-md text-primary mb-4">Our Vision</h3>
+                <h3 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Our Vision</h3>
                 <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
                   To be recognized as the most trusted institutional-grade consultancy in North India, setting the gold
                   standard for compliance and human resource excellence by 2030.
@@ -130,10 +130,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <section className="py-12 md:py-16 lg:py-24 transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="font-headline-md text-headline-md text-primary mb-4">Our Core Values</h2>
+              <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Our Core Values</h2>
               <p className="text-on-surface-variant font-body-lg">
                 The guiding principles that define every interaction, every report, and every success story at Thakur
                 Consultancy.
@@ -156,9 +156,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-primary text-white relative overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
+        <section className="py-12 md:py-16 lg:py-24 bg-primary text-white relative overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
               <div className="w-64 h-64 lg:w-96 lg:h-96 shrink-0 rounded-full border-4 border-secondary/30 p-2 relative">
                 <img
                   className="w-full h-full object-cover rounded-full"
@@ -183,27 +183,29 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <h2 className="font-headline-md text-headline-md text-primary text-center mb-20">A Legacy of Growth</h2>
-            <div className="relative timeline-line">
-              <div className="space-y-24 relative z-10">
+        <section className="py-12 md:py-16 lg:py-24 overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+            <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary text-center mb-10 md:mb-20">
+              A Legacy of Growth
+            </h2>
+            <div className="relative md:timeline-line">
+              <div className="space-y-8 md:space-y-24 relative z-10">
                 {timeline.map((item, i) => (
                   <div
                     key={item.year}
-                    className={`flex gap-12 items-center ${i % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                    className={`about-timeline-item ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   >
-                    <div className="w-1/2 flex flex-col justify-center">
-                      <div className={`glass-card p-8 rounded-xl ${i % 2 === 0 ? 'text-left' : 'text-right'}`}>
-                        <span className="text-secondary font-bold text-2xl mb-2 block">{item.year}</span>
+                    <div className="about-timeline-content flex flex-col justify-center">
+                      <div className={`glass-card p-6 md:p-8 rounded-xl text-left`}>
+                        <span className="text-secondary font-bold text-xl md:text-2xl mb-2 block">{item.year}</span>
                         <h4 className="text-primary font-headline-sm mb-3">{item.title}</h4>
                         <p className="text-on-surface-variant font-body-md">{item.desc}</p>
                       </div>
                     </div>
-                    <div className="relative flex items-center justify-center shrink-0">
-                      <div className="w-12 h-12 rounded-full border-4 border-background bg-secondary shadow-lg z-20" />
+                    <div className="about-timeline-dot">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-background bg-secondary shadow-lg z-20" />
                     </div>
-                    <div className="w-1/2" />
+                    <div className="about-timeline-spacer" />
                   </div>
                 ))}
               </div>
@@ -211,8 +213,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-surface-container-low transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="bg-white p-10 rounded-2xl shadow-sm border border-outline-variant/20">
                 <MaterialIcon icon="policy" className="text-primary text-5xl mb-6" />
@@ -240,11 +242,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
+        <section className="py-12 md:py-16 lg:py-24 transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+            <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
               <div className="lg:w-1/3">
-                <h2 className="font-headline-md text-headline-md text-primary mb-6">Our Credentials</h2>
+                <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-6">Our Credentials</h2>
                 <p className="text-on-surface-variant font-body-lg">
                   We hold the certifications that reflect our commitment to global operational standards and local
                   regulatory excellence.
@@ -264,9 +266,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-surface transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <h2 className="font-headline-md text-headline-md text-primary mb-12">Our Workspace</h2>
+        <section className="py-12 md:py-16 lg:py-24 bg-surface transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+            <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-12">Our Workspace</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="md:col-span-2 aspect-video rounded-2xl overflow-hidden shadow-lg group">
                 <img
@@ -300,8 +302,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 transition-all duration-1000 opacity-100 translate-y-0">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <section className="py-12 md:py-16 lg:py-24 transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
             <div className="relative rounded-3xl overflow-hidden bg-primary text-white p-12 lg:p-20 text-center">
               <div className="relative z-10">
                 <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Ready to Partner With Us?</h2>

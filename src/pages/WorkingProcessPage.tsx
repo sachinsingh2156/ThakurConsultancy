@@ -1,5 +1,16 @@
 import Layout from '../components/layout/Layout'
+import MaterialIcon from '../components/ui/MaterialIcon'
 import { useEffect } from 'react'
+
+const processSteps = [
+  { icon: 'chat', title: '1. Requirement', desc: 'In-depth consultation to understand your specific organizational needs.' },
+  { icon: 'analytics', title: '2. Analysis', desc: 'Thorough gap analysis and regulatory landscape assessment.' },
+  { icon: 'description', title: '3. Documentation', desc: 'Precise drafting of all necessary compliance and statutory documents.' },
+  { icon: 'settings', title: '4. Implementation', desc: 'Seamless integration of HR, tax, or compliance frameworks into your operations.' },
+  { icon: 'fact_check', title: '5. Compliance', desc: 'Timely and accurate submission to relevant regulatory authorities.' },
+  { icon: 'verified', title: '6. Audit Support', desc: 'Expert assistance during external audits and certification cycles.' },
+  { icon: 'monitor_heart', title: '7. Monitoring', desc: 'Ongoing vigilance to ensure long-term regulatory adherence.' },
+]
 
 export default function WorkingProcessPage() {
   useEffect(() => {
@@ -11,99 +22,56 @@ export default function WorkingProcessPage() {
   return (
     <Layout activeItem="process" variant="default" ctaLabel="Consult Experts">
       <>
-        <section className="relative pt-40 pb-20 overflow-hidden">
+        <section className="relative pt-28 md:pt-36 lg:pt-40 pb-20 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary-container/20 via-transparent to-transparent"></div>
-        <div className="max-w-container-max mx-auto px-margin-desktop text-center">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center">
         <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-label-sm uppercase tracking-widest mb-6">Execution Methodology</span>
-        <h1 className="font-display-lg text-display-lg md:text-[64px] text-primary mb-6 leading-tight">Our Working Process</h1>
+        <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg lg:text-[64px] text-primary mb-6 leading-tight">Our Working Process</h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
                         Institutional Precision and Strategic Execution. We bridge the gap between regulatory requirements and operational excellence through a refined, multi-stage delivery framework.
                     </p>
         </div>
         </section>
         
-        <section className="py-24 bg-surface-container-lowest">
-        <div className="max-w-container-max mx-auto px-margin-desktop overflow-x-auto pb-12 scrollbar-hide">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-lowest">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        {/* Mobile & tablet: vertical timeline */}
+        <div className="lg:hidden process-timeline-mobile">
+        {processSteps.map((step) => (
+        <div key={step.title} className="process-step-mobile">
+        <div className="w-12 h-12 shrink-0 rounded-full glass-card flex items-center justify-center text-primary border-2 border-primary/20 z-10">
+        <MaterialIcon icon={step.icon} />
+        </div>
+        <div className="flex-1 glass-card p-4 rounded-xl">
+        <h4 className="font-headline-sm text-label-md text-primary mb-2">{step.title}</h4>
+        <p className="font-body-md text-label-sm text-on-surface-variant">{step.desc}</p>
+        </div>
+        </div>
+        ))}
+        </div>
+        {/* Desktop: horizontal timeline */}
+        <div className="hidden lg:block overflow-x-auto pb-12 scrollbar-hide">
         <div className="relative min-w-[1200px] flex justify-between items-start pt-20">
-        
         <div className="absolute top-[124px] left-0 w-full h-[2px] timeline-line opacity-30"></div>
-        
-        <div className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
+        {processSteps.map((step) => (
+        <div key={step.title} className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
         <div className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 mb-8 border-2 border-primary/20">
-        <span className="material-symbols-outlined" data-icon="chat">chat</span>
+        <MaterialIcon icon={step.icon} />
         </div>
         <div className="text-center group-hover:-translate-y-2 transition-transform duration-300">
-        <h4 className="font-headline-sm text-label-md text-primary mb-2">1. Requirement</h4>
-        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">In-depth consultation to understand your specific organizational needs.</p>
+        <h4 className="font-headline-sm text-label-md text-primary mb-2">{step.title}</h4>
+        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">{step.desc}</p>
         </div>
         </div>
-        
-        <div className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
-        <div className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 mb-8 border-2 border-primary/20">
-        <span className="material-symbols-outlined" data-icon="analytics">analytics</span>
-        </div>
-        <div className="text-center group-hover:-translate-y-2 transition-transform duration-300">
-        <h4 className="font-headline-sm text-label-md text-primary mb-2">2. Analysis</h4>
-        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">Thorough gap analysis and regulatory landscape assessment.</p>
-        </div>
-        </div>
-        
-        <div className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
-        <div className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 mb-8 border-2 border-primary/20">
-        <span className="material-symbols-outlined" data-icon="description">description</span>
-        </div>
-        <div className="text-center group-hover:-translate-y-2 transition-transform duration-300">
-        <h4 className="font-headline-sm text-label-md text-primary mb-2">3. Documentation</h4>
-        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">Precise drafting of all necessary compliance and statutory documents.</p>
-        </div>
-        </div>
-        
-        <div className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
-        <div className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 mb-8 border-2 border-primary/20">
-        <span className="material-symbols-outlined" data-icon="settings">settings</span>
-        </div>
-        <div className="text-center group-hover:-translate-y-2 transition-transform duration-300">
-        <h4 className="font-headline-sm text-label-md text-primary mb-2">4. Implementation</h4>
-        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">Seamless integration of HR, tax, or compliance frameworks into your operations.</p>
-        </div>
-        </div>
-        
-        <div className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
-        <div className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 mb-8 border-2 border-primary/20">
-        <span className="material-symbols-outlined" data-icon="fact_check">fact_check</span>
-        </div>
-        <div className="text-center group-hover:-translate-y-2 transition-transform duration-300">
-        <h4 className="font-headline-sm text-label-md text-primary mb-2">5. Compliance</h4>
-        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">Timely and accurate submission to relevant regulatory authorities.</p>
-        </div>
-        </div>
-        
-        <div className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
-        <div className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 mb-8 border-2 border-primary/20">
-        <span className="material-symbols-outlined" data-icon="verified">verified</span>
-        </div>
-        <div className="text-center group-hover:-translate-y-2 transition-transform duration-300">
-        <h4 className="font-headline-sm text-label-md text-primary mb-2">6. Audit Support</h4>
-        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">Expert assistance during external audits and certification cycles.</p>
-        </div>
-        </div>
-        
-        <div className="group step-node relative flex flex-col items-center w-[160px] cursor-pointer">
-        <div className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 mb-8 border-2 border-primary/20">
-        <span className="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
-        </div>
-        <div className="text-center group-hover:-translate-y-2 transition-transform duration-300">
-        <h4 className="font-headline-sm text-label-md text-primary mb-2">7. Monitoring</h4>
-        <p className="font-body-md text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-2">Ongoing vigilance to ensure long-term regulatory adherence.</p>
-        </div>
+        ))}
         </div>
         </div>
         </div>
         </section>
         
-        <section className="py-24 bg-surface">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         <div>
         <h2 className="font-display-lg text-headline-md text-primary mb-8">Why Our Process Works</h2>
         <div className="space-y-6">
@@ -136,7 +104,7 @@ export default function WorkingProcessPage() {
         </div>
         </div>
         </div>
-        <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+        <div className="relative h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
         <div className="absolute inset-0 bg-primary/10 z-10"></div>
         <div className="w-full h-full bg-cover bg-center" data-alt="A sophisticated modern office interior in New Delhi with high-end glass architecture, featuring a diverse team of professional consultants collaborating in a bright, light-mode environment with elegant blue and gold accents reflecting corporate luxury." style={{ backgroundImage: 'url(\'https://lh3.googleusercontent.com/aida-public/AB6AXuAgsAlDEG8IErq_m5t6OMoMtziLjbu4G8TdG21LsS7HMh6QmSAxyS_w7vmSHwYmdbr1lbUx0cU4ZaskC_DvsWEhO17fL7syfLBBnQcr9ScYX47IHx79ME1p9ZqClYRFZN5CaKH6MD-ubWVhFlv4h974WtCxd6iNkrP10WGts935ddMMZn-72K1nLD62zNX1SlRx5KBAp8jcm3PMtNUNIzBaS55tLsI8PRxi5amTpzrybo7hqi2yYcfY\')' }}></div>
         </div>
@@ -144,8 +112,8 @@ export default function WorkingProcessPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface-container-low">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
         <div className="text-center mb-16">
         <h2 className="font-display-lg text-headline-md text-primary mb-4">Process FAQs</h2>
         <p className="font-body-md text-on-surface-variant">Common inquiries regarding our engagement and project cycles.</p>
@@ -195,13 +163,13 @@ export default function WorkingProcessPage() {
         </div>
         </section>
         
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary -z-10"></div>
         <div className="absolute right-0 bottom-0 opacity-10 -z-10">
         <span className="material-symbols-outlined text-[400px]" style={{ fontVariationSettings: '\'opsz\' 48' }}>trending_up</span>
         </div>
-        <div className="max-w-container-max mx-auto px-margin-desktop text-center">
-        <h2 className="font-display-lg text-display-lg text-white mb-8">Ready to Begin?</h2>
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center">
+        <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8">Ready to Begin?</h2>
         <p className="font-body-lg text-body-lg text-primary-fixed mb-12 max-w-2xl mx-auto">
                         Join the ranks of Delhi's most compliant and efficient organizations. Let our experts guide you through the complexities of modern business governance.
                     </p>

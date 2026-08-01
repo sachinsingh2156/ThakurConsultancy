@@ -7,21 +7,23 @@ export default function FaqPage() {
   return (
     <Layout activeItem="faq" variant="default" ctaLabel="Get Started">
       <>
-        <main className="pt-20">
+        <main className="pt-20 md:pt-24">
         
-        <section className="relative py-24 overflow-hidden">
+        <section className="relative py-12 md:py-16 lg:py-24 overflow-hidden">
         
-        <div className="max-w-container-max mx-auto px-margin-desktop relative z-10 text-center">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop relative z-10 text-center">
         <span className="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-6 uppercase tracking-widest">Knowledge Base</span>
-        <h1 className="font-display-lg text-display-lg text-primary mb-8 max-w-3xl mx-auto">Expert Answers for Modern Enterprise</h1>
-        <div className="max-w-2xl mx-auto relative group">
-        <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
+        <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 max-w-3xl mx-auto">Expert Answers for Modern Enterprise</h1>
+        <div className="max-w-2xl mx-auto">
+        <div className="relative group flex flex-col sm:block gap-3">
+        <div className="absolute inset-y-0 left-4 sm:left-6 flex items-center pointer-events-none hidden sm:flex">
         <span className="material-symbols-outlined text-outline">search</span>
         </div>
-        <input className="w-full pl-16 pr-6 py-5 rounded-2xl border border-outline-variant bg-white/50 backdrop-blur-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all shadow-xl shadow-primary/5 text-body-lg" placeholder="Search for regulatory frameworks, GST deadlines, or EPF rules..." type="text" />
-        <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-secondary text-on-secondary px-6 py-2.5 rounded-xl font-label-md hover:bg-secondary-fixed-dim transition-colors">Search</button>
+        <input className="w-full pl-4 sm:pl-16 pr-4 sm:pr-32 py-4 sm:py-5 rounded-2xl border border-outline-variant bg-white/50 backdrop-blur-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all shadow-xl shadow-primary/5 text-body-md sm:text-body-lg" placeholder="Search frameworks, GST, EPF..." type="text" />
+        <button type="button" className="sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2 w-full sm:w-auto bg-secondary text-on-secondary px-6 py-3 sm:py-2.5 rounded-xl font-label-md hover:bg-secondary-fixed-dim transition-colors">Search</button>
         </div>
-        <div className="mt-8 flex flex-wrap justify-center gap-4 text-on-surface-variant font-label-sm">
+        </div>
+        <div className="mt-6 md:mt-8 flex flex-wrap justify-center gap-2 md:gap-4 text-on-surface-variant font-label-sm px-2">
         <span className="px-4 py-2 rounded-full border border-outline-variant/30 bg-white/30 backdrop-blur-sm">Trending: GST Filing 2024</span>
         <span className="px-4 py-2 rounded-full border border-outline-variant/30 bg-white/30 backdrop-blur-sm">Trending: SMETA Audit</span>
         <span className="px-4 py-2 rounded-full border border-outline-variant/30 bg-white/30 backdrop-blur-sm">Trending: Labour Welfare Fund</span>
@@ -30,34 +32,34 @@ export default function FaqPage() {
         </section>
         
         <section className="pb-24">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
         
         <aside className="lg:col-span-3">
-        <div className="glass-card rounded-2xl p-6 sticky top-24 shadow-2xl shadow-primary/5 border border-outline-variant/30">
-        <h3 className="font-headline-sm text-headline-sm text-primary mb-6">Categories</h3>
-        <div className="space-y-1">
-        <button className="w-full flex items-center gap-3 p-3 rounded-xl bg-secondary-container text-on-secondary-container font-bold transition-all">
+        <div className="glass-card rounded-2xl p-4 md:p-6 lg:sticky lg:top-24 shadow-2xl shadow-primary/5 border border-outline-variant/30">
+        <h3 className="font-headline-sm text-headline-sm text-primary mb-4 lg:mb-6">Categories</h3>
+        <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-hide -mx-1 px-1">
+        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl bg-secondary-container text-on-secondary-container font-bold transition-all">
         <span className="material-symbols-outlined" data-icon="groups">groups</span>
         <span className="font-label-md">HR & Documentation</span>
         </button>
-        <button className="w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
+        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
         <span className="material-symbols-outlined" data-icon="verified_user">verified_user</span>
         <span className="font-label-md">Compliance</span>
         </button>
-        <button className="w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
+        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
         <span className="material-symbols-outlined" data-icon="payments">payments</span>
         <span className="font-label-md">Payroll</span>
         </button>
-        <button className="w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
+        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
         <span className="material-symbols-outlined" data-icon="account_balance">account_balance</span>
         <span className="font-label-md">Accounting & GST</span>
         </button>
-        <button className="w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
+        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
         <span className="material-symbols-outlined" data-icon="fact_check">fact_check</span>
         <span className="font-label-md">Audit</span>
         </button>
-        <button className="w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
+        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
         <span className="material-symbols-outlined" data-icon="gavel">gavel</span>
         <span className="font-label-md">Labour Law</span>
         </button>
@@ -137,12 +139,12 @@ export default function FaqPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-primary relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-24 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
         
         </div>
-        <div className="max-w-container-max mx-auto px-margin-desktop text-center relative z-10">
-        <h2 className="font-display-lg text-display-lg text-on-primary mb-6">Still have questions?</h2>
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center relative z-10">
+        <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-6">Still have questions?</h2>
         <p className="font-body-lg text-body-lg text-on-primary-container mb-12 max-w-2xl mx-auto">Our consultants are ready to help you navigate complex regulatory landscapes with precision and authority.</p>
         <div className="flex flex-col md:flex-row gap-6 justify-center">
         <button className="bg-secondary text-on-secondary px-10 py-4 rounded-xl font-label-md text-lg hover:bg-secondary-fixed transition-all flex items-center justify-center gap-3 shadow-xl shadow-black/20">

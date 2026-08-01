@@ -4,10 +4,66 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  @apply bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container;
+  @apply bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden;
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop;
+  }
+
+  .section-y {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+
+  .hero-title {
+    @apply font-display-lg text-display-lg-mobile md:text-display-lg leading-tight;
+  }
+
+  .section-title {
+    @apply font-headline-md text-headline-sm md:text-headline-md;
+  }
+
+  /* Vertical timeline for mobile/tablet */
+  .process-timeline-mobile {
+    @apply flex flex-col gap-8 relative pl-8;
+  }
+
+  .process-timeline-mobile::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #c4c6d2, #fed488);
+    opacity: 0.5;
+  }
+
+  .process-step-mobile {
+    @apply relative flex gap-4 items-start;
+  }
+
+  /* About page timeline - mobile stack */
+  .about-timeline-item {
+    @apply flex flex-col gap-6 md:flex-row md:gap-12 md:items-center;
+  }
+
+  .about-timeline-content {
+    @apply w-full md:w-1/2;
+  }
+
+  .about-timeline-dot {
+    @apply hidden md:flex relative items-center justify-center shrink-0;
+  }
+
+  .about-timeline-spacer {
+    @apply hidden md:block md:w-1/2;
+  }
 }
 
 .glass-card {
@@ -98,6 +154,21 @@ body {
   height: 100%;
   background: #c4c6d2;
   z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .timeline-line::before {
+    display: none;
+  }
+
+  .marquee-content {
+    gap: 24px;
+  }
+
+  .glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 .step-active .step-icon {

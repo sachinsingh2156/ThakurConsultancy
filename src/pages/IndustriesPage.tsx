@@ -7,14 +7,14 @@ export default function IndustriesPage() {
   return (
     <Layout activeItem="industries" variant="default" ctaLabel="Get Started">
       <>
-        <main className="pt-20">
+        <main className="pt-20 md:pt-24">
         
         <section className="relative h-[60vh] md:h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-cover bg-center" data-alt="A sweeping, wide-angle cinematic shot of a modern industrial landscape featuring sleek factories, logistics hubs, and high-tech skyscrapers in New Delhi. The scene is bathed in a bright, professional morning light with a sophisticated blue and gold color palette, reflecting prestige and institutional excellence. The visual style is crisp and clean, with a focus on structural symmetry and corporate modernity." style={{ backgroundImage: 'url(\'https://lh3.googleusercontent.com/aida-public/AB6AXuBhPFqnYq0C1lhvQUH4NdzhQEjMbpc2C9zzjWibnA98Db5N64EDHy5iuim2tjECAlRY1Jf0ihDoswbzW907VFRUhxKWrvymYPIzt6ERWCEpB_3Hssl7VB7IRmXm342Ohrzxvlu6vxB1MW-x9gNZrAewQb1PIE6B-fn9Qri1yA8SxqxsGZ9rVMf2p1pJqGmeRRFyIsz-MKQfyipZzwmgaSSPjaXyLN7ogm4ZbalItkyIzkBG8rUips4z\')' }}></div>
         <div className="absolute inset-0 hero-gradient"></div>
         </div>
-        <div className="relative z-10 w-full px-6 md:px-margin-desktop max-w-container-max mx-auto">
+        <div className="relative z-10 w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
         <div className="max-w-3xl">
         <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 leading-tight">
                                 Empowering Diverse Sectors with <span className="golden-text">Institutional Excellence</span>
@@ -31,7 +31,7 @@ export default function IndustriesPage() {
         </section>
         
         <section className="py-12 bg-primary-container">
-        <div className="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+        <div className="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="text-center">
         <p className="font-headline-md text-headline-md text-secondary-fixed mb-1">500+</p>
@@ -53,11 +53,11 @@ export default function IndustriesPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface-bright">
-        <div className="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-bright">
+        <div className="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
         <div className="text-center mb-16">
         <span className="text-secondary font-label-md text-label-md uppercase tracking-[0.2em] mb-4 block">Our Reach</span>
-        <h2 className="font-headline-md text-headline-md text-primary mb-4">Precision Solutions Across Diverse Markets</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Precision Solutions Across Diverse Markets</h2>
         <div className="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -161,16 +161,16 @@ export default function IndustriesPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface">
-        <div className="px-6 md:px-margin-desktop max-w-container-max mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface">
+        <div className="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         <div className="relative">
         <div className="w-full aspect-[4/3] rounded-3xl bg-cover bg-center shadow-2xl relative z-10" data-alt="A professional photograph of a bustling, high-efficiency logistics warehouse with automated sorting systems and busy transport trucks. The lighting is crisp and natural, showcasing a clean, well-organized environment. This represents a successful turnaround project. The mood is industrial yet highly technological and efficient, with cool blue and silver tones." style={{ backgroundImage: 'url(\'https://lh3.googleusercontent.com/aida-public/AB6AXuBDnq4lDHfLQUa_TYu9f4kQk_WbleVGeUzyb76czxJX5hynBNyqdUmA4NrC3vob0uclLKXtwPgjeWxrM5-K55HbuQazLBhudBG3TKUQLN8XOBMxC2m_T0wiR0aE4soSE6ko-0MsZH4Ed2tsRVkQjzXv9KtWI-0egNHXW4ylUKVo8YgcfZCI7NE-ECsx09QVQe8XDY1wAM32b8gGgR0IEL86XftKinHrqI5yZ69b8ycNF1sOfKmsud4k\')' }}></div>
         <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-secondary rounded-3xl -z-0"></div>
         </div>
         <div>
         <span className="text-secondary font-label-md text-label-md uppercase tracking-[0.2em] mb-4 block">Case Study Spotlight</span>
-        <h2 className="font-headline-md text-headline-md text-primary mb-6">Logistics Turnaround: Optimizing Statutory Compliance for a Pan-India Network</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-6">Logistics Turnaround: Optimizing Statutory Compliance for a Pan-India Network</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
                                     A major logistics firm was struggling with inconsistent compliance across 15 states. Thakur Consultancy implemented a centralized audit framework, reducing legal risks by 80% and increasing operational efficiency by 25% within the first year.
                                 </p>
@@ -193,10 +193,10 @@ export default function IndustriesPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface-container-low border-y border-outline-variant/30">
-        <div className="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low border-y border-outline-variant/30">
+        <div className="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
         <div className="text-center mb-16">
-        <h2 className="font-headline-md text-headline-md text-primary mb-4">Why Industry Leaders Choose Us</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Why Industry Leaders Choose Us</h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Providing the strategic edge through decades of deep domain expertise.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -232,8 +232,8 @@ export default function IndustriesPage() {
         </div>
         </section>
         
-        <section className="py-20 px-6 md:px-margin-desktop max-w-container-max mx-auto">
-        <div className="relative rounded-[2rem] overflow-hidden bg-primary p-12 md:p-20 text-center">
+        <section className="py-10 md:py-16 lg:py-20 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+        <div className="relative rounded-[2rem] overflow-hidden bg-primary p-8 sm:p-12 md:p-16 lg:p-20 text-center">
         <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-cover bg-center" data-alt="An abstract corporate background with subtle glowing network nodes and lines representing connectivity and industrial synergy. Deep blue and gold tones with high contrast and professional finish." style={{ backgroundImage: 'url(\'https://lh3.googleusercontent.com/aida-public/AB6AXuCfyclB2Ocwk-wKkfBFNhOyxcziLrxWahdlW8dSDiG4HPFxEkEFkAJmJr4K5zwzXEQ-9WvtoQuqVddKn-176XHeJCPCcZtAz5NSGfXbsdhJ35eYgcLwB63yQ9Kq_d_Wkm5JGEhmdRAMqvfrhWVszbzX3A5PwVZlxMPuMQ9xAfxQ68G18I7ygfBA0p7ykSOAe0an-iEu_k5waZlHZjPNhjAyVr34hQ1FNfMQhSwa845ghk9_wRUmt4Uw\')' }}></div>
         </div>

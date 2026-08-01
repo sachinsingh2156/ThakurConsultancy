@@ -7,17 +7,17 @@ export default function HrCompliancePage() {
   return (
     <Layout activeItem="services" variant="services" ctaLabel="Get Started">
       <>
-        <main className="pt-32 pb-24 max-w-container-max mx-auto px-margin-desktop">
+        <main className="pt-24 md:pt-32 pb-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
         
         <div className="mb-16">
-        <h1 className="font-display-lg text-display-lg text-primary mb-4">Enterprise Compliance <span className="gold-gradient-text">& HR Systems</span></h1>
+        <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Enterprise Compliance <span className="gold-gradient-text">& HR Systems</span></h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Strategic advisory and operational excellence for high-stakes business environments. We manage the complexity so you can lead with confidence.</p>
         </div>
-        <div className="flex flex-col md:flex-row gap-gutter">
+        <div className="flex flex-col lg:flex-row gap-gutter">
         
-        <aside className="w-full md:w-72 flex-shrink-0">
-        <div className="bg-surface/60 backdrop-blur-lg rounded-xl h-fit sticky top-24 border border-white/30 shadow-[0_8px_32px_rgba(0,45,114,0.05)] p-4 space-y-2 flex flex-col">
-        <div className="mb-4 pb-4 border-b border-outline-variant/20">
+        <aside className="w-full lg:w-72 flex-shrink-0 order-2 lg:order-1">
+        <div className="bg-surface/60 backdrop-blur-lg rounded-xl lg:sticky lg:top-24 border border-white/30 shadow-[0_8px_32px_rgba(0,45,114,0.05)] p-3 md:p-4">
+        <div className="mb-3 lg:mb-4 pb-3 lg:pb-4 border-b border-outline-variant/20">
         <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
         <span className="material-symbols-outlined" style={{ fontVariationSettings: '\'FILL\' 1' }}>dashboard</span>
@@ -29,34 +29,36 @@ export default function HrCompliancePage() {
         </div>
         </div>
         
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary bg-secondary-container/30 border-l-4 border-secondary font-semibold font-label-md transition-all select-none" href="#epf">
+        <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-hide lg:space-y-2">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-primary bg-secondary-container/30 border-l-4 border-secondary font-semibold font-label-md transition-all select-none whitespace-nowrap" href="#epf">
         <span className="material-symbols-outlined">account_balance</span> EPF Compliance
                             </a>
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:translate-x-1 transition-all select-none font-label-md" href="#esic">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low lg:hover:translate-x-1 transition-all select-none font-label-md whitespace-nowrap" href="#esic">
         <span className="material-symbols-outlined">health_and_safety</span> ESIC Management
                             </a>
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:translate-x-1 transition-all select-none font-label-md" href="#payroll">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low lg:hover:translate-x-1 transition-all select-none font-label-md whitespace-nowrap" href="#payroll">
         <span className="material-symbols-outlined">payments</span> Payroll Services
                             </a>
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:translate-x-1 transition-all select-none font-label-md" href="#labour">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low lg:hover:translate-x-1 transition-all select-none font-label-md whitespace-nowrap" href="#labour">
         <span className="material-symbols-outlined">gavel</span> Labour Law
                             </a>
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:translate-x-1 transition-all select-none font-label-md" href="#hr-doc">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low lg:hover:translate-x-1 transition-all select-none font-label-md whitespace-nowrap" href="#hr-doc">
         <span className="material-symbols-outlined">description</span> HR Documentation
                             </a>
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:translate-x-1 transition-all select-none font-label-md" href="#contractor">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low lg:hover:translate-x-1 transition-all select-none font-label-md whitespace-nowrap" href="#contractor">
         <span className="material-symbols-outlined">group_work</span> Contractor Compliance
                             </a>
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:translate-x-1 transition-all select-none font-label-md" href="#factory">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low lg:hover:translate-x-1 transition-all select-none font-label-md whitespace-nowrap" href="#factory">
         <span className="material-symbols-outlined">factory</span> Factory Act
                             </a>
-        <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:translate-x-1 transition-all select-none font-label-md" href="#registrations">
+        <a className="shrink-0 lg:shrink flex items-center gap-2 lg:gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low lg:hover:translate-x-1 transition-all select-none font-label-md whitespace-nowrap" href="#registrations">
         <span className="material-symbols-outlined">app_registration</span> Registrations
                             </a>
         </div>
+        </div>
         </aside>
         
-        <div className="flex-grow">
+        <div className="flex-1 min-w-0 order-1 lg:order-2">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
         <div className="glass-card p-8 rounded-2xl flex flex-col h-full group transition-all duration-700 opacity-100 translate-y-0" id="epf">
@@ -249,7 +251,7 @@ export default function HrCompliancePage() {
         <section className="mt-32">
         <div className="text-center mb-16">
         <span className="text-secondary font-bold tracking-[0.2em] uppercase text-label-sm">Informed Decisions</span>
-        <h2 className="font-headline-md text-headline-md text-primary mt-2">Frequently Asked Questions</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mt-2">Frequently Asked Questions</h2>
         </div>
         <div className="max-w-3xl mx-auto space-y-4">
         <div className="glass-card rounded-xl overflow-hidden group transition-all duration-700 opacity-100 translate-y-0">
@@ -292,12 +294,12 @@ export default function HrCompliancePage() {
         </section>
         </main>
         
-        <section className="w-full py-24 bg-primary relative overflow-hidden">
+        <section className="w-full py-12 md:py-16 lg:py-24 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
         <div className="w-full h-full" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
         </div>
-        <div className="relative max-w-container-max mx-auto px-margin-desktop text-center">
-        <h2 className="font-display-lg text-display-lg text-on-primary mb-6">Ready to fortify your <span className="text-secondary-fixed">HR framework?</span></h2>
+        <div className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center">
+        <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-6">Ready to fortify your <span className="text-secondary-fixed">HR framework?</span></h2>
         <p className="font-body-lg text-body-lg text-on-primary/80 max-w-2xl mx-auto mb-12">Consult with our experts to audit your current compliance status and build a scalable HR infrastructure.</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
         <button className="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 rounded-full font-headline-sm text-lg hover:bg-secondary-fixed-dim transition-all shadow-xl active:scale-95">
@@ -311,7 +313,7 @@ export default function HrCompliancePage() {
         </section>
         
         
-        <a className="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-transform z-[100]" href="https://wa.me/910000000000" target="_blank">
+        <a className="fixed bottom-4 right-4 md:bottom-8 md:right-8 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-transform z-[100]" href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
         <svg fill="currentColor" height="32" viewBox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.594l.005-.005zm-5.607 11.41h-.001c-1.247 0-2.473-.336-3.541-.97l-.254-.151-2.633.691.704-2.564-.165-.263a6.592 6.592 0 0 1-1.012-3.48c.002-3.633 2.964-6.595 6.599-6.595 1.758 0 3.41.684 4.653 1.926 1.242 1.242 1.925 2.894 1.925 4.653 0 3.633-2.961 6.594-6.595 6.594z"></path>
         </svg>

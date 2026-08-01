@@ -8,20 +8,27 @@ export default function BlogPage() {
     <Layout activeItem="blog" variant="default" ctaLabel="Get Started">
       <>
         <main className="pt-24 pb-20">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
         
-        <div className="mb-8 flex items-center bg-secondary-container/20 rounded-full px-4 py-2 border border-secondary/10 overflow-hidden">
-        <span className="bg-secondary text-on-secondary px-3 py-1 rounded-full text-label-sm whitespace-nowrap mr-4">TRENDING NEWS</span>
-        <div className="flex gap-12 animate-marquee whitespace-nowrap overflow-hidden">
+        <div className="mb-8 flex flex-col sm:flex-row items-start sm:items-center bg-secondary-container/20 rounded-2xl sm:rounded-full px-4 py-3 sm:py-2 border border-secondary/10 overflow-hidden gap-2 sm:gap-0">
+        <span className="bg-secondary text-on-secondary px-3 py-1 rounded-full text-label-sm whitespace-nowrap shrink-0">TRENDING NEWS</span>
+        <div className="flex gap-8 sm:gap-12 animate-marquee whitespace-nowrap overflow-hidden w-full">
         <p className="text-label-md text-on-secondary-container">New GST E-Invoicing Thresholds effective from next quarter.</p>
         <p className="text-label-md text-on-secondary-container">Supreme Court Ruling on Provident Fund Contributions updated.</p>
         <p className="text-label-md text-on-secondary-container">Factory Act Safety Compliance Audit Checklist for 2024 Released.</p>
         </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
         
-        <aside className="lg:col-span-3 hidden lg:block">
-        <div className="bg-surface-container-low/90 backdrop-blur-md rounded-xl h-fit sticky top-24 border border-white/20 shadow-[0_30px_40px_rgba(0,45,114,0.08)] p-6">
+        <div className="lg:hidden flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-1 px-1">
+        <a className="shrink-0 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-md font-bold whitespace-nowrap" href="#">GST</a>
+        <a className="shrink-0 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-lg font-label-md whitespace-nowrap" href="#">HR Updates</a>
+        <a className="shrink-0 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-lg font-label-md whitespace-nowrap" href="#">Labour Law</a>
+        <a className="shrink-0 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-lg font-label-md whitespace-nowrap" href="#">Compliance</a>
+        </div>
+
+        <aside className="hidden lg:block lg:col-span-3">
+        <div className="bg-surface-container-low/90 backdrop-blur-md rounded-xl h-fit lg:sticky lg:top-24 border border-white/20 shadow-[0_30px_40px_rgba(0,45,114,0.08)] p-6">
         <h3 className="font-display-lg text-primary text-headline-sm mb-1">Resource Center</h3>
         <p className="text-on-surface-variant text-label-sm mb-6">Expert Regulatory Insights</p>
         <div className="flex flex-col gap-2">
@@ -73,7 +80,7 @@ export default function BlogPage() {
         </div>
         </aside>
         
-        <div className="lg:col-span-9">
+        <div className="lg:col-span-9 min-w-0">
         
         <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
@@ -239,11 +246,11 @@ export default function BlogPage() {
         </div>
         </div>
         
-        <section className="mt-20 bg-primary py-20 relative overflow-hidden">
+        <section className="mt-20 bg-primary py-10 md:py-16 lg:py-20 relative overflow-hidden">
         
         <div className="absolute -right-20 -top-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
         <div className="absolute -left-20 -bottom-20 w-96 h-96 bg-secondary-fixed/5 rounded-full blur-3xl"></div>
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center relative z-10">
         <div className="max-w-3xl mx-auto">
         <span className="text-secondary-fixed font-bold text-label-md tracking-widest uppercase mb-4 block">STAY COMPLIANT</span>
         <h2 className="font-display-lg text-white text-display-lg-mobile md:text-display-lg mb-6">Subscribe to Compliance Alerts</h2>

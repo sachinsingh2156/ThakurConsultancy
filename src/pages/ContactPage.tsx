@@ -10,14 +10,14 @@ export default function ContactPage() {
   return (
     <Layout activeItem="contact" variant="default" ctaLabel="Get Started">
       <>
-        <main className="pt-32 pb-24">
+        <main className="pt-24 md:pt-32 pb-24">
         
-        <section className="max-w-container-max mx-auto px-margin-desktop mb-16 text-center md:text-left">
-        <h1 className="font-display-lg text-display-lg text-primary mb-4 leading-tight">Institutional <br className="hidden md:block" />Partnership & Support</h1>
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop mb-16 text-center md:text-left">
+        <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight">Institutional <br className="hidden md:block" />Partnership & Support</h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Connect with our dedicated compliance experts to navigate the complexities of corporate governance and HR operations in New Delhi.</p>
         </section>
         
-        <section className="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12">
         
         <div className="lg:col-span-5 space-y-8">
         <div className="glass-card p-8 rounded-xl border-l-4 border-secondary">
@@ -86,7 +86,7 @@ export default function ContactPage() {
         <div className="lg:col-span-7">
         <div className="glass-card p-10 rounded-2xl relative overflow-hidden h-full">
         <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16"></div>
-        <h3 className="font-headline-md text-headline-md text-primary mb-8">Service Inquiry</h3>
+        <h3 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-8">Service Inquiry</h3>
         <form className="space-y-6" id="contactForm" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="relative floating-label-input group">
@@ -131,10 +131,10 @@ export default function ContactPage() {
         </div>
         </section>
         
-        <section className="max-w-container-max mx-auto px-margin-desktop mt-32">
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop mt-32">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
         <div className="max-w-xl">
-        <h2 className="font-headline-md text-headline-md text-primary mb-4">Common Inquiries</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Common Inquiries</h2>
         <p className="font-body-md text-body-md text-on-surface-variant">Expedite your resolution by reviewing our frequently addressed administrative topics.</p>
         </div>
         <a className="font-label-md text-label-md text-primary flex items-center gap-2 group" href="#">
@@ -158,9 +158,9 @@ export default function ContactPage() {
         </div>
         </section>
         
-        <section className="max-w-container-max mx-auto px-margin-desktop mt-32">
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop mt-32">
         <div className="bg-primary-container text-on-primary-container rounded-3xl p-12 relative overflow-hidden">
-        <div className="absolute right-0 top-0 h-full w-1/2 opacity-20 pointer-events-none">
+        <div className="absolute right-0 top-0 h-full w-full md:w-1/2 opacity-20 pointer-events-none">
         <svg className="h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
         <path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
         </svg>

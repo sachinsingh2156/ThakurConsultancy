@@ -5,7 +5,7 @@ export default function AuditCertificationsPage() {
   return (
     <Layout activeItem="services" variant="default" ctaLabel="Get Started">
       <>
-        <main className="pt-20">
+        <main className="pt-20 md:pt-24">
         
         <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -44,10 +44,10 @@ export default function AuditCertificationsPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface-container-low">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low">
         <div className="max-w-container-max mx-auto px-6 md:px-16">
         <div className="text-center mb-16 space-y-4">
-        <h2 className="font-headline-md text-headline-md text-primary">Comprehensive Certification Portfolio</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary">Comprehensive Certification Portfolio</h2>
         <p className="text-on-surface-variant max-w-2xl mx-auto">Expertise across international frameworks to ensure your business meets every global mandate with precision.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -145,11 +145,11 @@ export default function AuditCertificationsPage() {
         </div>
         </section>
         
-        <section className="py-24">
+        <section className="py-12 md:py-16 lg:py-24">
         <div className="max-w-container-max mx-auto px-6 md:px-16">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         <div>
-        <h2 className="font-headline-md text-headline-md text-primary mb-6">The Audit Journey</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-6">The Audit Journey</h2>
         <p className="font-body-lg text-on-surface-variant mb-12">We follow a transparent, systematic roadmap to guide your organization from preparation to prestigious certification.</p>
         <div className="space-y-12 relative before:content-[''] before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/30">
         <div className="relative pl-12">
@@ -199,7 +199,7 @@ export default function AuditCertificationsPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-tertiary text-on-tertiary overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-24 bg-tertiary text-on-tertiary overflow-hidden">
         <div className="max-w-container-max mx-auto px-6 md:px-16">
         <div className="mb-16">
         <h2 className="font-headline-md text-headline-md mb-4 text-secondary-fixed-dim">Strategic Advantages</h2>
@@ -244,10 +244,10 @@ export default function AuditCertificationsPage() {
         </div>
         </section>
         
-        <section className="py-24 bg-surface">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface">
         <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
-        <h2 className="font-headline-md text-headline-md text-primary mb-4">Frequently Asked Questions</h2>
+        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">Frequently Asked Questions</h2>
         <p className="text-on-surface-variant">Clear answers for your compliance journey.</p>
         </div>
         <div className="space-y-4">
@@ -282,10 +282,10 @@ export default function AuditCertificationsPage() {
         </div>
         </section>
         
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-24 relative overflow-hidden">
         
         <div className="relative z-10 max-w-container-max mx-auto px-6 text-center">
-        <div className="bg-primary text-on-primary rounded-[3rem] p-12 md:p-24 shadow-2xl relative overflow-hidden">
+        <div className="bg-primary text-on-primary rounded-[3rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 p-12 opacity-10">
         <span className="material-symbols-outlined text-[200px]">workspace_premium</span>
         </div>
