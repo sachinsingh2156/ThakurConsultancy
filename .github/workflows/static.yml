@@ -32,8 +32,7 @@ jobs:
 
       - name: Build
         env:
-          # Use "/" when custom domain www.thakurconsultancy.com is live
-          VITE_BASE_PATH: /ThakurConsultancy/
+          VITE_BASE_PATH: /
         run: npm run build
 
       # GitHub Pages has no SPA fallback; 404.html serves index for client-side routes
