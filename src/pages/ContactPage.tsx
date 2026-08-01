@@ -8,7 +8,7 @@ export default function ContactPage() {
   }
 
   return (
-    <Layout activeItem="contact" variant="default" ctaLabel="Get Started">
+    <Layout activeItem="contact" variant="default">
       <>
         <main className="pt-24 md:pt-32 pb-24">
         

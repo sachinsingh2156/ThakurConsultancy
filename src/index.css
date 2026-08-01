@@ -47,23 +47,6 @@ body {
   .process-step-mobile {
     @apply relative flex gap-4 items-start;
   }
-
-  /* About page timeline - mobile stack */
-  .about-timeline-item {
-    @apply flex flex-col gap-6 md:flex-row md:gap-12 md:items-center;
-  }
-
-  .about-timeline-content {
-    @apply w-full md:w-1/2;
-  }
-
-  .about-timeline-dot {
-    @apply hidden md:flex relative items-center justify-center shrink-0;
-  }
-
-  .about-timeline-spacer {
-    @apply hidden md:block md:w-1/2;
-  }
 }
 
 .glass-card {

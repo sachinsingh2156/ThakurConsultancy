@@ -8,7 +8,6 @@ import Logo from '../ui/Logo'
 interface NavbarProps {
   activeItem: NavItem
   variant?: NavVariant
-  ctaLabel?: string
 }
 
 const serviceLinks = [
@@ -24,7 +23,6 @@ const navLinks: { key: NavItem; to: string; label: string }[] = [
   { key: 'process', to: '/process', label: 'Process' },
   { key: 'blog', to: '/blog', label: 'Blog' },
   { key: 'faq', to: '/faq', label: 'FAQ' },
-  { key: 'contact', to: '/contact', label: 'Contact' },
 ]
 
 function linkClass(active: boolean) {
@@ -33,7 +31,7 @@ function linkClass(active: boolean) {
     : 'text-on-surface-variant hover:text-primary font-label-md text-label-md py-1 transition-colors whitespace-nowrap'
 }
 
-export default function Navbar({ activeItem, variant = 'default', ctaLabel = 'Get Started' }: NavbarProps) {
+export default function Navbar({ activeItem, variant = 'default' }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
   useNavbarScroll()
 
@@ -102,7 +100,7 @@ export default function Navbar({ activeItem, variant = 'default', ctaLabel = 'Ge
             to="/contact"
             className="hidden sm:inline-flex bg-primary text-on-primary px-4 lg:px-6 py-2 lg:py-2.5 rounded-lg font-label-md text-label-sm lg:text-label-md hover:bg-primary/90 transition-all shadow-lg active:scale-95 whitespace-nowrap"
           >
-            {ctaLabel}
+            Contact Us
           </Link>
 
           <button
@@ -153,7 +151,7 @@ export default function Navbar({ activeItem, variant = 'default', ctaLabel = 'Ge
             className="block w-full text-center bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md mt-4"
             onClick={closeMenu}
           >
-            {ctaLabel}
+            Contact Us
           </Link>
         </div>
       )}

@@ -7,13 +7,12 @@ interface LayoutProps {
   children: ReactNode
   activeItem: NavItem
   variant?: NavVariant
-  ctaLabel?: string
 }
 
-export default function Layout({ children, activeItem, variant, ctaLabel }: LayoutProps) {
+export default function Layout({ children, activeItem, variant }: LayoutProps) {
   return (
     <>
-      <Navbar activeItem={activeItem} variant={variant} ctaLabel={ctaLabel} />
+      <Navbar activeItem={activeItem} variant={variant} />
       {children}
       <Footer />
     </>

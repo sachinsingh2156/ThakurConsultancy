@@ -106,9 +106,12 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-white mb-6">Contact Us</h4>
           <address className="not-italic text-tertiary-fixed-dim/70 space-y-4">
-            <p className="flex gap-2">
-              <MaterialIcon icon="location_on" className="text-secondary-fixed" />
-              Connaught Place, New Delhi 110001
+            <p className="flex gap-2 items-start">
+              <MaterialIcon icon="location_on" className="text-secondary-fixed shrink-0 mt-0.5" />
+              <span>
+                16B, Ground Floor, Studio Apartment,
+                Sector-68B, Dwarka, New Delhi – 110078
+              </span>
             </p>
             <p className="flex gap-2">
               <MaterialIcon icon="phone" className="text-secondary-fixed" />
@@ -123,8 +126,7 @@ export default function Footer() {
       </div>
       <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-white/5 text-center md:text-left">
         <p className="text-tertiary-fixed-dim/50 text-label-sm font-label-md">
-          © 2024 Thakur Consultancy. All rights reserved. ISO 9001 Certified. New Delhi Office: Connaught Place,
-          New Delhi 110001.
+          © 2026 Thakur Consultancy. All rights reserved. ISO 9001 Certified.
         </p>
       </div>
     </footer>

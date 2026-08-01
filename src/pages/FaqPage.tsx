@@ -1,182 +1,253 @@
 import Layout from '../components/layout/Layout'
-import { toggleAccordion, useFaqInteractions } from '../hooks/useFaqInteractions'
+import { useScrollReveal } from '../hooks/useScrollReveal'
+import MaterialIcon from '../components/ui/MaterialIcon'
+import { faqSections, totalFaqCount } from '../data/faqContent'
+
+const trendingTopics = ['GST Filing 2024', 'SMETA Audit', 'Labour Welfare Fund', 'EPF ECR Deadline']
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqSections.flatMap((section) =>
+    section.questions.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  ),
+}
 
 export default function FaqPage() {
-  useFaqInteractions()
+  useScrollReveal()
 
   return (
-    <Layout activeItem="faq" variant="default" ctaLabel="Get Started">
-      <>
-        <main className="pt-20 md:pt-24">
-        
-        <section className="relative py-12 md:py-16 lg:py-24 overflow-hidden">
-        
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop relative z-10 text-center">
-        <span className="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-6 uppercase tracking-widest">Knowledge Base</span>
-        <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 max-w-3xl mx-auto">Expert Answers for Modern Enterprise</h1>
-        <div className="max-w-2xl mx-auto">
-        <div className="relative group flex flex-col sm:block gap-3">
-        <div className="absolute inset-y-0 left-4 sm:left-6 flex items-center pointer-events-none hidden sm:flex">
-        <span className="material-symbols-outlined text-outline">search</span>
-        </div>
-        <input className="w-full pl-4 sm:pl-16 pr-4 sm:pr-32 py-4 sm:py-5 rounded-2xl border border-outline-variant bg-white/50 backdrop-blur-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all shadow-xl shadow-primary/5 text-body-md sm:text-body-lg" placeholder="Search frameworks, GST, EPF..." type="text" />
-        <button type="button" className="sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2 w-full sm:w-auto bg-secondary text-on-secondary px-6 py-3 sm:py-2.5 rounded-xl font-label-md hover:bg-secondary-fixed-dim transition-colors">Search</button>
-        </div>
-        </div>
-        <div className="mt-6 md:mt-8 flex flex-wrap justify-center gap-2 md:gap-4 text-on-surface-variant font-label-sm px-2">
-        <span className="px-4 py-2 rounded-full border border-outline-variant/30 bg-white/30 backdrop-blur-sm">Trending: GST Filing 2024</span>
-        <span className="px-4 py-2 rounded-full border border-outline-variant/30 bg-white/30 backdrop-blur-sm">Trending: SMETA Audit</span>
-        <span className="px-4 py-2 rounded-full border border-outline-variant/30 bg-white/30 backdrop-blur-sm">Trending: Labour Welfare Fund</span>
-        </div>
-        </div>
+    <Layout activeItem="faq" variant="default">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      <main className="pt-20 md:pt-24">
+        {/* Hero */}
+        <section className="relative py-12 md:py-16 lg:py-20 bg-surface-container-low overflow-hidden">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop relative z-10 text-center">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-secondary-container text-on-secondary-container font-label-sm mb-6 uppercase tracking-widest">
+              Knowledge Base
+            </span>
+            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 max-w-3xl mx-auto">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+              Expert answers on HR, payroll, GST, labour law, audits, and statutory compliance for businesses
+              operating in India — especially Delhi NCR.
+            </p>
+
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative flex flex-col sm:flex-row gap-3">
+                <div className="relative flex-1 group">
+                  <MaterialIcon
+                    icon="search"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors"
+                  />
+                  <input
+                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-outline-variant/30 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all shadow-[0_4px_24px_rgba(0,45,114,0.08)] text-body-md"
+                    placeholder="Search GST, EPF, labour law, audits..."
+                    type="search"
+                    aria-label="Search FAQs"
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="shrink-0 bg-secondary text-on-secondary px-8 py-4 rounded-xl font-label-md font-bold hover:brightness-110 transition-all shadow-md"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm">
+              <div className="flex items-center gap-2 text-on-surface-variant">
+                <MaterialIcon icon="category" className="text-secondary" />
+                <span>
+                  <strong className="text-primary">{faqSections.length}</strong> categories
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-on-surface-variant">
+                <MaterialIcon icon="quiz" className="text-secondary" />
+                <span>
+                  <strong className="text-primary">{totalFaqCount}+</strong> expert answers
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-on-surface-variant">
+                <MaterialIcon icon="update" className="text-secondary" />
+                <span>
+                  Updated for <strong className="text-primary">2024–25</strong>
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-2 md:gap-3">
+              {trendingTopics.map((topic) => (
+                <span
+                  key={topic}
+                  className="px-4 py-2 rounded-full border border-outline-variant/25 bg-white text-on-surface-variant font-label-sm"
+                >
+                  Trending: {topic}
+                </span>
+              ))}
+            </div>
+          </div>
         </section>
-        
-        <section className="pb-24">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-        
-        <aside className="lg:col-span-3">
-        <div className="glass-card rounded-2xl p-4 md:p-6 lg:sticky lg:top-24 shadow-2xl shadow-primary/5 border border-outline-variant/30">
-        <h3 className="font-headline-sm text-headline-sm text-primary mb-4 lg:mb-6">Categories</h3>
-        <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-hide -mx-1 px-1">
-        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl bg-secondary-container text-on-secondary-container font-bold transition-all">
-        <span className="material-symbols-outlined" data-icon="groups">groups</span>
-        <span className="font-label-md">HR & Documentation</span>
-        </button>
-        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
-        <span className="material-symbols-outlined" data-icon="verified_user">verified_user</span>
-        <span className="font-label-md">Compliance</span>
-        </button>
-        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
-        <span className="material-symbols-outlined" data-icon="payments">payments</span>
-        <span className="font-label-md">Payroll</span>
-        </button>
-        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
-        <span className="material-symbols-outlined" data-icon="account_balance">account_balance</span>
-        <span className="font-label-md">Accounting & GST</span>
-        </button>
-        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
-        <span className="material-symbols-outlined" data-icon="fact_check">fact_check</span>
-        <span className="font-label-md">Audit</span>
-        </button>
-        <button className="shrink-0 lg:w-full flex items-center gap-3 p-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all">
-        <span className="material-symbols-outlined" data-icon="gavel">gavel</span>
-        <span className="font-label-md">Labour Law</span>
-        </button>
-        </div>
-        </div>
-        </aside>
-        
-        <div className="lg:col-span-9 space-y-4">
-        
-        <div className="glass-card rounded-2xl overflow-hidden border border-outline-variant/30 shadow-sm">
-        <div className="p-6 border-b border-outline-variant/20 flex items-center gap-3">
-        <span className="material-symbols-outlined text-secondary" data-icon="groups" style={{ fontVariationSettings: '\'FILL\' 1' }}>groups</span>
-        <h2 className="font-headline-sm text-headline-sm text-primary">HR & Documentation</h2>
-        </div>
-        <div className="accordion-item px-6 border-b border-outline-variant/10 active">
-        <button className="w-full py-6 flex justify-between items-center text-left" onClick={(e) => toggleAccordion(e.currentTarget)}>
-        <span className="font-headline-sm text-lg text-on-surface">What documents are essential for new employee onboarding?</span>
-        <span className="material-symbols-outlined chevron transition-transform duration-300">expand_more</span>
-        </button>
-        <div className="accordion-content text-on-surface-variant leading-relaxed">
-                                            Essential onboarding documents include the Offer Letter, Appointment Letter, KYC documents (Aadhar, PAN), educational certificates, previous employment relieving letters, and signed Confidentiality Agreements. Thakur Consultancy provides a standardized digital toolkit to automate this collection process while ensuring regulatory compliance.
-                                        </div>
-        </div>
-        <div className="accordion-item px-6 border-b border-outline-variant/10">
-        <button className="w-full py-6 flex justify-between items-center text-left" onClick={(e) => toggleAccordion(e.currentTarget)}>
-        <span className="font-headline-sm text-lg text-on-surface">How often should employee policies be updated?</span>
-        <span className="material-symbols-outlined chevron transition-transform duration-300">expand_more</span>
-        </button>
-        <div className="accordion-content text-on-surface-variant leading-relaxed">
-                                            Employee policies should be reviewed annually or immediately following major shifts in labor legislation (such as new Wage Codes). We recommend a bi-annual audit of the Employee Handbook to reflect evolving hybrid work models and data privacy standards.
-                                        </div>
-        </div>
-        </div>
-        
-        <div className="glass-card rounded-2xl overflow-hidden border border-outline-variant/30 shadow-sm">
-        <div className="p-6 border-b border-outline-variant/20 flex items-center gap-3">
-        <span className="material-symbols-outlined text-secondary" data-icon="verified_user" style={{ fontVariationSettings: '\'FILL\' 1' }}>verified_user</span>
-        <h2 className="font-headline-sm text-headline-sm text-primary">Compliance & Audits</h2>
-        </div>
-        <div className="accordion-item px-6 border-b border-outline-variant/10">
-        <button className="w-full py-6 flex justify-between items-center text-left" onClick={(e) => toggleAccordion(e.currentTarget)}>
-        <span className="font-headline-sm text-lg text-on-surface">What is the difference between ISO and SMETA audits?</span>
-        <span className="material-symbols-outlined chevron transition-transform duration-300">expand_more</span>
-        </button>
-        <div className="accordion-content text-on-surface-variant leading-relaxed">
-                                            ISO (International Organization for Standardization) focuses on quality, environmental, or security management systems. SMETA (Sedex Members Ethical Trade Audit) focuses specifically on social responsibility, including labor standards, health and safety, environment, and business ethics. Thakur Consultancy helps businesses bridge the gap between these frameworks for comprehensive institutional reliability.
-                                        </div>
-        </div>
-        <div className="accordion-item px-6 border-b border-outline-variant/10">
-        <button className="w-full py-6 flex justify-between items-center text-left" onClick={(e) => toggleAccordion(e.currentTarget)}>
-        <span className="font-headline-sm text-lg text-on-surface">How can we ensure 100% statutory compliance for multi-state operations?</span>
-        <span className="material-symbols-outlined chevron transition-transform duration-300">expand_more</span>
-        </button>
-        <div className="accordion-content text-on-surface-variant leading-relaxed">
-                                            Multi-state operations require a centralized compliance dashboard that tracks state-specific labor laws, professional tax registrations, and minimum wage updates. Our proprietary audit mechanism ensures that location-specific registrations are renewed automatically and filings are reconciled monthly.
-                                        </div>
-        </div>
-        </div>
-        
-        <div className="glass-card rounded-2xl overflow-hidden border border-outline-variant/30 shadow-sm">
-        <div className="p-6 border-b border-outline-variant/20 flex items-center gap-3">
-        <span className="material-symbols-outlined text-secondary" data-icon="payments" style={{ fontVariationSettings: '\'FILL\' 1' }}>payments</span>
-        <h2 className="font-headline-sm text-headline-sm text-primary">Payroll & Benefits</h2>
-        </div>
-        <div className="accordion-item px-6 border-b border-outline-variant/10">
-        <button className="w-full py-6 flex justify-between items-center text-left" onClick={(e) => toggleAccordion(e.currentTarget)}>
-        <span className="font-headline-sm text-lg text-on-surface">What are the current EPF and ESIC contribution rates?</span>
-        <span className="material-symbols-outlined chevron transition-transform duration-300">expand_more</span>
-        </button>
-        <div className="accordion-content text-on-surface-variant leading-relaxed">
-                                            As per current regulations, the EPF contribution is 12% of basic salary for both employer and employee. ESIC rates are 0.75% for employees and 3.25% for employers (for employees earning up to ₹21,000). Note that these thresholds are subject to change based on new Ministry of Labour notifications.
-                                        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
+
+        {/* Browse by category */}
+        <section className="py-10 md:py-12 border-b border-outline-variant/15 bg-surface">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+            <h2 className="font-headline-sm text-headline-sm text-primary text-center mb-2">Browse by Topic</h2>
+            <p className="text-on-surface-variant text-center text-sm mb-8 max-w-xl mx-auto">
+              Jump directly to the section relevant to your business query.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {faqSections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="group flex items-start gap-4 p-5 rounded-2xl bg-white border border-outline-variant/15 shadow-[0_4px_20px_rgba(0,45,114,0.05)] hover:shadow-[0_8px_32px_rgba(0,45,114,0.1)] hover:border-secondary/30 transition-all duration-300"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-primary-fixed/70 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary-container group-hover:text-white transition-colors">
+                    <MaterialIcon icon={section.icon} className="text-xl" />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-headline-sm text-primary mb-1 group-hover:text-secondary transition-colors">
+                      {section.title}
+                    </h3>
+                    <p className="text-on-surface-variant text-sm leading-relaxed line-clamp-2">
+                      {section.description}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
         </section>
-        
+
+        {/* FAQ sections */}
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low">
+          <div className="max-w-4xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+            <div className="space-y-10 md:space-y-14">
+              {faqSections.map((section) => (
+                <article
+                  key={section.id}
+                  id={section.id}
+                  className="scroll-mt-28 bg-white rounded-2xl border border-outline-variant/15 shadow-[0_4px_24px_rgba(0,45,114,0.06)] overflow-hidden"
+                >
+                  <header className="px-6 md:px-8 py-5 md:py-6 border-b border-outline-variant/15 bg-surface-container-low/60">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary-fixed/70 flex items-center justify-center text-primary shrink-0">
+                        <MaterialIcon icon={section.icon} className="text-2xl" filled />
+                      </div>
+                      <div>
+                        <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-1">
+                          {section.title}
+                        </h2>
+                        <p className="text-on-surface-variant text-sm leading-relaxed">{section.description}</p>
+                        <p className="text-secondary font-label-sm font-bold mt-2">
+                          {section.questions.length} questions in this section
+                        </p>
+                      </div>
+                    </div>
+                  </header>
+                  <div className="divide-y divide-outline-variant/10">
+                    {section.questions.map((item, index) => (
+                      <details
+                        key={item.question}
+                        className="group px-6 md:px-8"
+                        open={item.defaultOpen ?? index === 0}
+                      >
+                        <summary className="py-5 md:py-6 flex justify-between items-start gap-4 cursor-pointer list-none">
+                          <span className="font-headline-sm text-base md:text-lg text-primary text-left leading-snug pr-2">
+                            {item.question}
+                          </span>
+                          <MaterialIcon
+                            icon="expand_more"
+                            className="shrink-0 mt-0.5 transition-transform group-open:rotate-180 text-secondary"
+                          />
+                        </summary>
+                        <div className="pb-5 md:pb-6 text-on-surface-variant leading-relaxed text-sm md:text-base">
+                          {item.answer}
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
         <section className="py-12 md:py-16 lg:py-24 bg-primary relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
-        
-        </div>
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center relative z-10">
-        <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-6">Still have questions?</h2>
-        <p className="font-body-lg text-body-lg text-on-primary-container mb-12 max-w-2xl mx-auto">Our consultants are ready to help you navigate complex regulatory landscapes with precision and authority.</p>
-        <div className="flex flex-col md:flex-row gap-6 justify-center">
-        <button className="bg-secondary text-on-secondary px-10 py-4 rounded-xl font-label-md text-lg hover:bg-secondary-fixed transition-all flex items-center justify-center gap-3 shadow-xl shadow-black/20">
-        <span className="material-symbols-outlined">support_agent</span>
-                                Consult an Expert
-                            </button>
-        <button className="bg-white/10 text-on-primary border border-white/20 px-10 py-4 rounded-xl font-label-md text-lg hover:bg-white/20 transition-all backdrop-blur-md flex items-center justify-center gap-3">
-        <span className="material-symbols-outlined">mail</span>
-                                Email Support
-                            </button>
-        </div>
-        </div>
+          <div
+            className="absolute inset-0 opacity-10 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '40px 40px',
+            }}
+            aria-hidden="true"
+          />
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center relative z-10">
+            <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">
+              Still have questions?
+            </h2>
+            <p className="font-body-lg text-body-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Our consultants are ready to help you navigate complex regulatory landscapes with precision and
+              authority. Get personalized guidance for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                type="button"
+                className="bg-secondary-fixed text-primary px-10 py-4 rounded-xl font-label-md font-bold hover:brightness-105 transition-all flex items-center justify-center gap-3 shadow-xl"
+              >
+                <MaterialIcon icon="support_agent" />
+                Consult an Expert
+              </button>
+              <button
+                type="button"
+                className="bg-white/10 text-white border border-white/25 px-10 py-4 rounded-xl font-label-md font-bold hover:bg-white/15 transition-all flex items-center justify-center gap-3"
+              >
+                <MaterialIcon icon="mail" />
+                Email Support
+              </button>
+            </div>
+          </div>
         </section>
-        </main>
-        
-        
-        <div className="fixed bottom-8 right-8 z-[100] group">
+      </main>
+
+      <div className="fixed bottom-8 right-8 z-[100] group">
         <div className="absolute bottom-full right-0 mb-4 scale-0 group-hover:scale-100 transition-all origin-bottom-right duration-300">
-        <div className="glass-card p-4 rounded-2xl shadow-2xl border border-outline-variant w-64 mb-2">
-        <div className="flex items-center gap-3 mb-3">
-        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-        <span className="font-label-md text-primary">Experts Online Now</span>
+          <div className="bg-white p-4 rounded-2xl shadow-[0_8px_32px_rgba(0,45,114,0.15)] border border-outline-variant/15 w-64 mb-2">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="font-label-md text-primary">Experts Online Now</span>
+            </div>
+            <p className="text-sm text-on-surface-variant mb-4">
+              How can we assist with your compliance questions today?
+            </p>
+            <button
+              type="button"
+              className="w-full bg-primary text-on-primary py-2 rounded-lg text-sm font-label-md font-bold"
+            >
+              Start Live Chat
+            </button>
+          </div>
         </div>
-        <p className="text-sm text-on-surface-variant mb-4">How can we assist with your documentation today?</p>
-        <button className="w-full bg-primary text-on-primary py-2 rounded-lg text-sm font-label-md">Start Live Chat</button>
-        </div>
-        </div>
-        <button className="w-16 h-16 rounded-full bg-secondary text-on-secondary shadow-2xl flex items-center justify-center hover:rotate-12 transition-transform active:scale-95">
-        <span className="material-symbols-outlined text-3xl">chat_bubble</span>
+        <button
+          type="button"
+          className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-on-secondary shadow-2xl flex items-center justify-center hover:scale-105 transition-transform active:scale-95"
+          aria-label="Open live chat"
+        >
+          <MaterialIcon icon="chat_bubble" className="text-3xl" />
         </button>
-        </div>
-      </>
+      </div>
     </Layout>
   )
 }

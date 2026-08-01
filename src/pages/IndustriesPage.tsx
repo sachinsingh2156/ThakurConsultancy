@@ -5,7 +5,7 @@ export default function IndustriesPage() {
   useScrollReveal()
 
   return (
-    <Layout activeItem="industries" variant="default" ctaLabel="Get Started">
+    <Layout activeItem="industries" variant="default">
       <>
         <main className="pt-20 md:pt-24">
         

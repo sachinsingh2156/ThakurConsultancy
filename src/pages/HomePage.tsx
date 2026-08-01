@@ -5,7 +5,7 @@ export default function HomePage() {
   useScrollReveal()
 
   return (
-    <Layout activeItem="home" variant="default" ctaLabel="Get Started">
+    <Layout activeItem="home" variant="default">
       <>
         <section className="relative min-h-[100svh] md:h-screen flex items-center pt-20 md:pt-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -325,17 +325,27 @@ export default function HomePage() {
         </section>
         
         <section className="py-10 md:py-16 lg:py-20 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop reveal active">
-        <div className="max-w-container-max mx-auto glass-card rounded-3xl p-6 sm:p-10 md:p-16 text-center bg-primary text-white overflow-hidden relative">
-        <div className="absolute -top-24 -left-24 w-64 h-64 bg-secondary-fixed opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-fixed opacity-10 rounded-full blur-3xl"></div>
-        <div className="relative z-10 space-y-6">
-        <h2 className="text-display-lg-mobile md:text-display-lg font-display-lg">Ready to Institutionalize Your Corporate Operations?</h2>
-        <p className="text-body-lg opacity-80 max-w-2xl mx-auto">Join hundreds of successful businesses in New Delhi who trust us for their HR, tax, and compliance needs.</p>
-        <div className="flex flex-wrap justify-center gap-4 pt-4">
-        <button className="bg-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-label-md text-label-md hover:brightness-110 transition-all shadow-xl">
+        <div className="max-w-container-max mx-auto rounded-3xl bg-primary text-white overflow-hidden relative px-6 py-12 sm:px-10 sm:py-14 md:px-16 md:py-16 lg:px-20 lg:py-20 text-center">
+        <div className="absolute -top-24 -left-24 w-64 h-64 bg-secondary-fixed/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+        <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-fixed/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+        <div className="relative z-10 flex flex-col items-center gap-6 md:gap-8">
+        <h2 className="text-display-lg-mobile md:text-display-lg font-display-lg font-bold text-white leading-tight max-w-4xl">
+                                Ready to Institutionalize Your Corporate Operations?
+                            </h2>
+        <p className="text-body-md md:text-body-lg text-primary-fixed/80 max-w-2xl mx-auto leading-relaxed">
+                                Join hundreds of successful businesses in New Delhi who trust us for their HR, tax, and compliance needs.
+                            </p>
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 pt-2 w-full sm:w-auto">
+        <button
+                                type="button"
+                                className="w-full sm:w-auto bg-secondary-fixed text-primary px-8 md:px-10 py-4 md:py-5 rounded-lg font-label-md font-bold hover:brightness-105 transition-all shadow-lg"
+                            >
                                 Schedule a Strategy Call
                             </button>
-        <button className="bg-transparent border-2 border-white/30 text-white px-10 py-5 rounded-lg font-label-md text-label-md hover:bg-white/10 transition-all">
+        <button
+                                type="button"
+                                className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white px-8 md:px-10 py-4 md:py-5 rounded-lg font-label-md font-bold hover:bg-white/10 transition-all"
+                            >
                                 Download Portfolio
                             </button>
         </div>

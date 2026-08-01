@@ -23,7 +23,7 @@ export default function AboutPage() {
   useScrollReveal()
 
   return (
-    <Layout activeItem="about" variant="default" ctaLabel="Get Started">
+    <Layout activeItem="about" variant="default">
       <main className="pt-20 md:pt-24">
         <section className="relative min-h-[70vh] md:h-[600px] flex items-center overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
           <div className="absolute inset-0 z-0">
@@ -162,11 +162,11 @@ export default function AboutPage() {
               <div className="w-64 h-64 lg:w-96 lg:h-96 shrink-0 rounded-full border-4 border-secondary/30 p-2 relative">
                 <img
                   className="w-full h-full object-cover rounded-full"
-                  alt="Anand Thakur, CEO"
+                  alt="Ravindra Thakur, CEO"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ord4HBsmINEGUwP5DyqsEdfh8_Hvpvdef-B0bZlMyVDlMdPsfyT1NVKev4qxFcp8-9dU1nrKPXl1IsFfrIzd43TEBMJ_-FVE6jO66uQWoj9z5lFMFl0ra7cSqpcsDq7sXOUmFnfaXoYSLurt-iX4IEPlI3Jokwtr5AUfn2iBBNBrTAT5I_FUXjoP2mqtR-9AQQjAymtO-3H27KlP71ov6do-sB7tx_zbE-XOKgcIC5YkR_4HGWVm"
                 />
                 <div className="absolute -bottom-4 right-8 bg-secondary px-4 py-2 rounded-lg">
-                  <span className="font-label-md text-white">Anand Thakur, CEO</span>
+                  <span className="font-label-md text-white">Ravindra Thakur, CEO</span>
                 </div>
               </div>
               <div className="flex-1">
@@ -183,32 +183,77 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-12 md:py-16 lg:py-24 overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+        <section className="py-12 md:py-16 lg:py-24 bg-surface-container-low overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
-            <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary text-center mb-10 md:mb-20">
-              A Legacy of Growth
-            </h2>
-            <div className="relative md:timeline-line">
-              <div className="space-y-8 md:space-y-24 relative z-10">
-                {timeline.map((item, i) => (
-                  <div
-                    key={item.year}
-                    className={`about-timeline-item ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                  >
-                    <div className="about-timeline-content flex flex-col justify-center">
-                      <div className={`glass-card p-6 md:p-8 rounded-xl text-left`}>
-                        <span className="text-secondary font-bold text-xl md:text-2xl mb-2 block">{item.year}</span>
-                        <h4 className="text-primary font-headline-sm mb-3">{item.title}</h4>
-                        <p className="text-on-surface-variant font-body-md">{item.desc}</p>
+            <div className="text-center max-w-2xl mx-auto mb-12 md:mb-20">
+              <h2 className="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">
+                A Legacy of Growth
+              </h2>
+              <p className="text-on-surface-variant font-body-lg leading-relaxed">
+                From a small Connaught Place office to institutional leadership — milestones that shaped who we are today.
+              </p>
+            </div>
+
+            <div className="relative max-w-5xl mx-auto">
+              <div
+                className="absolute left-[15px] md:left-1/2 top-4 bottom-4 w-px bg-outline-variant/30 md:-translate-x-1/2"
+                aria-hidden="true"
+              />
+
+              <ol className="relative flex flex-col gap-10 md:gap-24 list-none p-0 m-0">
+                {timeline.map((item, i) => {
+                  const alignLeft = i % 2 === 0
+                  return (
+                    <li key={item.year} className="relative">
+                      {/* Mobile & tablet */}
+                      <div className="flex gap-5 sm:gap-6 md:hidden pl-1">
+                        <div className="flex flex-col items-center pt-7 shrink-0">
+                          <div
+                            className="w-4 h-4 rounded-full bg-secondary ring-4 ring-secondary/20 z-10"
+                            aria-hidden="true"
+                          />
+                        </div>
+                        <article className="flex-1 bg-white rounded-2xl p-6 sm:p-8 shadow-[0_4px_24px_rgba(0,45,114,0.08)] border border-outline-variant/10">
+                          <time
+                            dateTime={item.year}
+                            className="text-secondary font-bold text-2xl sm:text-3xl block mb-2 tabular-nums"
+                          >
+                            {item.year}
+                          </time>
+                          <h3 className="text-primary font-headline-sm font-bold mb-3">{item.title}</h3>
+                          <p className="text-on-surface-variant font-body-md leading-relaxed">{item.desc}</p>
+                        </article>
                       </div>
-                    </div>
-                    <div className="about-timeline-dot">
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-background bg-secondary shadow-lg z-20" />
-                    </div>
-                    <div className="about-timeline-spacer" />
-                  </div>
-                ))}
-              </div>
+
+                      {/* Desktop alternating layout */}
+                      <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:gap-x-12 lg:gap-x-16 items-center">
+                        <div className={alignLeft ? 'col-start-1' : 'col-start-3 row-start-1'}>
+                          <article
+                            className={`bg-white rounded-2xl p-8 lg:p-10 shadow-[0_4px_24px_rgba(0,45,114,0.08)] border border-outline-variant/10 hover:shadow-[0_8px_32px_rgba(0,45,114,0.12)] transition-shadow duration-300 ${
+                              alignLeft ? 'md:mr-2 lg:mr-4' : 'md:ml-2 lg:ml-4'
+                            }`}
+                          >
+                            <time
+                              dateTime={item.year}
+                              className="text-secondary font-bold text-3xl block mb-2 tabular-nums"
+                            >
+                              {item.year}
+                            </time>
+                            <h3 className="text-primary font-headline-sm font-bold mb-3">{item.title}</h3>
+                            <p className="text-on-surface-variant font-body-md leading-relaxed">{item.desc}</p>
+                          </article>
+                        </div>
+                        <div className="col-start-2 row-start-1 flex justify-center">
+                          <div
+                            className="w-5 h-5 rounded-full bg-secondary ring-[8px] ring-secondary/15 z-10"
+                            aria-hidden="true"
+                          />
+                        </div>
+                      </div>
+                    </li>
+                  )
+                })}
+              </ol>
             </div>
           </div>
         </section>
