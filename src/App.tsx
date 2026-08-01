@@ -11,8 +11,11 @@ import FaqPage from './pages/FaqPage'
 import ContactPage from './pages/ContactPage'
 
 export default function App() {
+  // Matches Vite `base` — required for GitHub Pages project sites
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
