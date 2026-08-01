@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useNavbarScroll } from '../../hooks/useNavbarScroll'
 import type { NavItem, NavVariant } from '../../types/navigation'
 import MaterialIcon from '../ui/MaterialIcon'
+import Logo from '../ui/Logo'
 
 interface NavbarProps {
   activeItem: NavItem
@@ -41,13 +42,8 @@ export default function Navbar({ activeItem, variant = 'default', ctaLabel = 'Ge
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md transition-all duration-300 border-b border-white/20 shadow-[0_4px_30px_rgba(0,45,114,0.08)] py-3 md:py-4">
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto gap-4">
-        <Link
-          to="/"
-          className="font-headline-md text-base sm:text-headline-sm lg:text-headline-md font-bold text-primary tracking-tight shrink-0"
-          onClick={closeMenu}
-        >
-          <span className="hidden xs:inline">Thakur Consultancy</span>
-          <span className="xs:hidden">Thakur</span>
+        <Link to="/" className="shrink-0 flex items-center" onClick={closeMenu} aria-label="Thakur Consultancy home">
+          <Logo variant="header" className="h-9 sm:h-10 md:h-11 w-auto max-w-[180px] sm:max-w-[220px]" />
         </Link>
 
         <div className="hidden xl:flex items-center gap-6 2xl:gap-8">

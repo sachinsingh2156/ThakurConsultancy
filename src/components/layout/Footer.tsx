@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 import MaterialIcon from '../ui/MaterialIcon'
+import Logo from '../ui/Logo'
 
 export default function Footer() {
   return (
     <footer className="bg-tertiary text-on-tertiary border-t border-outline-variant/30 pt-16 pb-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
         <div className="space-y-6">
-          <div className="font-headline-sm text-headline-sm text-secondary-fixed">Thakur Consultancy</div>
+          <Link to="/" aria-label="Thakur Consultancy home">
+            <Logo variant="footer" className="h-10 sm:h-12 w-auto max-w-[200px]" />
+          </Link>
           <p className="text-tertiary-fixed-dim/70 text-body-md">
             New Delhi&apos;s premier partner for strategic HR operations and rigorous compliance management since
             2009.
