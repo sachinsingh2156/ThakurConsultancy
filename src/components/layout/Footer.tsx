@@ -115,7 +115,7 @@ export default function Footer() {
             </p>
             <p className="flex gap-2">
               <MaterialIcon icon="phone" className="text-secondary-fixed" />
-              +91 11 2341 XXXX
+              +91 9599224488
             </p>
             <p className="flex gap-2">
               <MaterialIcon icon="schedule" className="text-secondary-fixed" />
